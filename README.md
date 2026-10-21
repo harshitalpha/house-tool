@@ -19,3 +19,7 @@ Layout: `packages/core` (pure TS: schema, geometry, validator, ids, serialize, f
 ## Use it with AI assistants
 
 An MCP server (`packages/mcp`) and a Claude Code plugin (`plugins/house-design`) let an assistant design the house through validated operations; setup for Claude Code, Claude Desktop, Cursor, Codex, Gemini CLI and copy-paste prompts for chat apps is in [docs/ai-tools.md](docs/ai-tools.md).
+
+## Licence
+
+MIT, see [LICENSE](LICENSE). Textures in `apps/web/public/textures` are CC0 from Poly Haven.

@@ -1,5 +1,6 @@
 {
   "name": "@house/web",
+  "license": "MIT",
   "private": true,
   "type": "module",
   "scripts": {

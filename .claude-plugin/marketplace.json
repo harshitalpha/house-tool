@@ -1,0 +1,12 @@
+{
+  "name": "house-tool",
+  "description": "Claude plugins for the 3D House Tool.",
+  "owner": { "name": "House Tool" },
+  "plugins": [
+    {
+      "name": "house-design",
+      "source": "./plugins/house-design",
+      "description": "Design a 3D house or flat with Claude: rooms, doors, furniture, lights and finishes through validated edit operations."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@house/core",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "immer": "^11.1.21",
+    "zod": "^4.0.0"
+  }
+}

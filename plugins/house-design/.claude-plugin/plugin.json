@@ -1,0 +1,6 @@
+{
+  "name": "house-design",
+  "version": "0.1.0",
+  "description": "Design a 3D house or flat with Claude: rooms, doors, furniture, lights and finishes through validated edit operations (MCP server + design skill).",
+  "keywords": ["interior-design", "3d", "house", "floor-plan", "mcp"]
+}

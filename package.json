@@ -1,0 +1,21 @@
+{
+  "name": "house-tool",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "test": "npm run test -w @house/core && npm run test -w @house/mcp",
+    "typecheck": "tsc -p packages/core --noEmit && tsc -p packages/mcp --noEmit && tsc -p apps/web --noEmit",
+    "dev": "npm run dev -w @house/web",
+    "build": "npm run build -w @house/web",
+    "build:mcp": "npm run build -w @house/mcp",
+    "gen:integrations": "node scripts/gen-integrations.mjs"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "vitest": "^3.0.0"
+  }
+}

@@ -1,0 +1,59 @@
+:root{
+  --bg:#f6f6f4; --panel:#fff; --ink:#151515; --ink2:#555; --muted:#8a8a85; --line:#e2e1db;
+  --accent:#2a78d6; --accent-soft:rgba(42,120,214,.12); --bad:#c0392b; --bad-soft:rgba(192,57,43,.1); --good:#0a7a0a;
+  font:14px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; color:var(--ink);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg)}
+button,select,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:5px 10px}
+button:hover:not(:disabled){border-color:#bbb}
+button:disabled{opacity:.45;cursor:default}
+button.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+button.danger{color:var(--bad)}
+button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+button.sm{padding:2px 8px;font-size:12px}
+input[type=text],input[type=number],select,textarea{border:1px solid var(--line);border-radius:6px;padding:4px 7px;background:#fff;min-width:0}
+input[type=number]{width:72px}
+textarea{width:100%;resize:vertical;font-family:ui-monospace,Menlo,monospace;font-size:12px}
+.app{display:flex;flex-direction:column;height:100vh}
+.topbar{display:flex;gap:8px;align-items:center;flex-wrap:wrap;padding:8px 12px;background:var(--panel);border-bottom:1px solid var(--line)}
+.topbar h1{font-size:16px;margin:0 8px 0 0}
+.topbar .sep{width:1px;height:22px;background:var(--line);margin:0 4px}
+.topbar .grow{flex:1}
+.main{flex:1;display:grid;grid-template-columns:minmax(0,1fr) 400px;min-height:0}
+.stage{position:relative;min-height:0;background:#f3f4f6}
+.side{display:flex;flex-direction:column;min-height:0;background:var(--panel);border-left:1px solid var(--line)}
+.tabs{display:flex;border-bottom:1px solid var(--line)}
+.tabs button{flex:1;border:0;border-radius:0;border-bottom:2px solid transparent;background:none;padding:9px 4px;color:var(--ink2)}
+.tabs button.on{color:var(--ink);border-bottom-color:var(--accent);font-weight:600;background:none}
+.tabbody{flex:1;overflow:auto;padding:12px}
+.hint{color:var(--muted);font-size:12.5px;margin:4px 0 10px}
+.row{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin:6px 0}
+.row label{color:var(--ink2);min-width:64px}
+.chip{display:inline-block;font-size:12px;font-weight:600;padding:1px 8px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.chip.bad{background:var(--bad-soft);color:var(--bad)}
+.errors{background:var(--bad-soft);border-radius:8px;padding:8px 10px;margin:8px 0;font-size:13px}
+.errors li,.preview li{margin:3px 0}
+.errors code{background:#fff6;padding:0 4px;border-radius:4px}
+.preview{background:var(--accent-soft);border-radius:8px;padding:8px 10px;margin:8px 0;font-size:13px}
+ul.plain{margin:0;padding-left:18px}
+.toast{position:absolute;left:12px;bottom:12px;max-width:min(560px,70%);background:#000c;color:#fff;border-radius:10px;padding:8px 12px;font-size:13px;pointer-events:none}
+.toast.error{background:#8e2a20ee}
+.legend{position:absolute;right:12px;top:12px;background:#fffd;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12px;color:var(--ink2)}
+.histitem{border:1px solid var(--line);border-radius:8px;padding:7px 9px;margin:6px 0}
+.histitem .t{font-weight:600}
+.histitem .m{color:var(--ink2);font-size:12.5px}
+h3{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin:16px 0 4px}
+.kv{display:grid;grid-template-columns:90px 1fr;gap:4px 8px;align-items:center}
+@media (max-width:900px){.main{grid-template-columns:1fr}.side{height:50vh;border-left:0;border-top:1px solid var(--line)}}
+
+.room-label { display: flex; flex-direction: column; align-items: center; white-space: nowrap; font: 11px/1.25 system-ui, sans-serif; color: #1f2933; text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff; }
+.room-label b { font-size: 12px; }
+.room-label span { color: #3e4c59; }
+
+.trace { position: fixed; inset: 0; z-index: 50; background: #0e1014; display: flex; flex-direction: column; }
+.trace-bar { display: flex; align-items: center; gap: 10px; padding: 8px 12px; background: #fff; border-bottom: 1px solid #d5d9de; flex-wrap: wrap; font-size: 13px; }
+.trace-bar label { display: flex; align-items: center; gap: 4px; }
+.trace-status { color: #52606d; }
+.trace-stage { flex: 1; min-height: 0; display: flex; align-items: center; justify-content: center; padding: 10px; overflow: hidden; }

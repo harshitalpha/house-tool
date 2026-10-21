@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "house": {
+      "command": "node",
+      "args": ["/ABSOLUTE/PATH/TO/house-tool/plugins/house-design/server/house-mcp.mjs"],
+      "env": { "HOUSE_FILE": "/ABSOLUTE/PATH/TO/my-house.json" }
+    }
+  }
+}
